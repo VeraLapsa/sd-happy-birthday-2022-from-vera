@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+}
+
+.solar-system {
+  width: 800px;
+  height: 800px;
+  background-color: black;
+  margin-inline: auto;
+}
+
+.sun {
+  position: absolute;
+  margin: calc(400px - 60px) calc(400px - 60px);
+  display: block;
+  width: 120px;
+}
+
+.greeting {
+  position: absolute;
+  margin: calc(300px - 60px) calc(260px - 60px);
+  color: white;
+  font-family: arial;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.earth {
+  width: 50px;
+  top: 400px;
+  left: 100px;
+  animation: earth-rotation 2s infinite linear;
+  position: absolute;
+}
+
+.moon {
+  width: 20px;
+  top: calc(400px + 25px - 50px);
+  left: calc(100px + 25px - 50px);
+  animation: moon-revolution 6s infinite linear;
+  position: absolute;
+  transform-origin: 50px 50px;
+}
+
+.earth-orbit {
+  height: 100%;
+  animation: earth-revolution 24s infinite linear;
+}
+
+@keyframes earth-revolution {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes moon-revolution {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes earth-rotation {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.earth-orbit {
+  background-position: center;
+  background-size: 575px;
+  background-repeat: no-repeat;
+}
